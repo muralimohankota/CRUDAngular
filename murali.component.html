@@ -1,0 +1,37 @@
+<input type="text" [(ngModel)]="s1" name="sno" placeholder="Student Number"/>
+<br/><br/>
+<input type="text" [(ngModel)]="s2" name="name" placeholder="Student Name"/>
+<br/><br/>
+<input type="text" [(ngModel)]="s3" name="marks" placeholder="Student Marks"/>
+<br/><br/>
+
+<input type="button" value="GET DATA" (click)="getdata()"/>
+&nbsp;&nbsp;
+<input type="button" value="SEND DATA" (click)="senddata()"/>
+&nbsp;&nbsp;
+<input type="button" value="UPDATE" (click)="update()"/>
+&nbsp;&nbsp;
+
+<br/><br/>
+
+<table border="3">
+    <tr>
+<th>Student Number</th>
+<th>Student Name</th>
+<th>Student Marks</th>
+</tr>
+<tr *ngFor="let item of details">
+<td>{{item.sno}}</td>
+<td>{{item.name}}</td>
+<td>{{item.marks}}</td>
+<td>
+   
+    <a href="#" (click)="delete(item.sno)">delete</a>
+</td>
+</tr>
+
+</table>
+
+
+
+
